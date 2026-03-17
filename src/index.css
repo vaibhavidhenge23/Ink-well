@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 16% 10%;
+    --foreground: 38 20% 93%;
+    --card: 222 16% 13%;
+    --card-foreground: 38 20% 93%;
+    --popover: 222 16% 13%;
+    --popover-foreground: 38 20% 93%;
+    --primary: 33 88% 60%;
+    --primary-foreground: 222 16% 10%;
+    --secondary: 222 16% 17%;
+    --secondary-foreground: 38 20% 93%;
+    --muted: 222 16% 17%;
+    --muted-foreground: 222 10% 48%;
+    --accent: 198 80% 56%;
+    --accent-foreground: 222 16% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 38 20% 93%;
+    --border: 222 16% 20%;
+    --input: 222 16% 20%;
+    --ring: 33 88% 60%;
+    --radius: 0.75rem;
+    --success: 158 60% 50%;
+    --tag-bg: 222 16% 18%;
+    --hover: 222 16% 19%;
+    --text-secondary: 222 10% 60%;
+    --sidebar-background: 222 16% 9%;
+    --sidebar-foreground: 222 10% 60%;
+    --sidebar-primary: 33 88% 60%;
+    --sidebar-primary-foreground: 222 16% 10%;
+    --sidebar-accent: 222 16% 17%;
+    --sidebar-accent-foreground: 38 20% 93%;
+    --sidebar-border: 222 16% 20%;
+    --sidebar-ring: 33 88% 60%;
+    --cat-tech: 217 91% 65%;
+    --cat-science: 172 75% 50%;
+    --cat-business: 33 88% 60%;
+    --cat-health: 158 60% 50%;
+    --cat-philosophy: 258 80% 68%;
+    --cat-culture: 14 88% 60%;
+    --cat-design: 320 72% 62%;
+    --cat-finance: 96 60% 52%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+  p { line-height: 1.75; }
+}
+
+@layer components {
+  .font-serif-display { font-family: 'Playfair Display', Georgia, serif; }
+  .font-reading { font-family: Georgia, 'Times New Roman', serif; }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(33 88% 60%), hsl(20 90% 54%));
+  }
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(33 88% 60%), hsl(20 90% 54%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover { @apply transition-all duration-300; }
+  .card-hover:hover {
+    border-left: 2px solid hsl(33 88% 60%);
+    background: hsl(222 16% 19%);
+  }
+  .ink-glow { text-shadow: 0 0 40px hsla(33, 88%, 60%, 0.35); }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}

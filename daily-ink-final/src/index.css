@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 6.7%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 6.7%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 47 78% 59%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 33%;
+    --accent: 11 78% 59%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 47 78% 59%;
+    --radius: 0.5rem;
+    --success: 142 71% 45%;
+    --tag-bg: 0 0% 12%;
+    --hover: 0 0% 14%;
+    --text-secondary: 0 0% 63%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 63%;
+    --sidebar-primary: 47 78% 59%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 13%;
+    --sidebar-ring: 47 78% 59%;
+
+    /* Category colors */
+    --cat-tech: 239 84% 67%;
+    --cat-science: 187 92% 43%;
+    --cat-business: 38 92% 50%;
+    --cat-health: 142 71% 45%;
+    --cat-philosophy: 271 91% 65%;
+    --cat-culture: 11 78% 59%;
+    --cat-design: 330 81% 60%;
+    --cat-finance: 84 81% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-reading {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(47 78% 59%), hsl(38 92% 50%));
+  }
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(47 78% 59%), hsl(38 92% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    border-left: 2px solid hsl(47 78% 59%);
+    background: hsl(0 0% 14%);
+  }
+  .ink-glow {
+    text-shadow: 0 0 40px hsla(47, 78%, 59%, 0.3);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
