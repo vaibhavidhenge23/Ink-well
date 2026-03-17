@@ -267,17 +267,7 @@ Provides reading theme and font size globally, persisted to `localStorage`.
 
 ---
 
-## 📸 Demo
 
-> _Replace the placeholders below with actual screenshots_
-
-| Feed | Article Reader | Explore |
-|---|---|---|
-| ![Feed](https://via.placeholder.com/300x200?text=Feed) | ![Reader](https://via.placeholder.com/300x200?text=Reader) | ![Explore](https://via.placeholder.com/300x200?text=Explore) |
-
-| Settings | Profile | Themes |
-|---|---|---|
-| ![Settings](https://via.placeholder.com/300x200?text=Settings) | ![Profile](https://via.placeholder.com/300x200?text=Profile) | ![Themes](https://via.placeholder.com/300x200?text=Themes) |
 
 ---
 
